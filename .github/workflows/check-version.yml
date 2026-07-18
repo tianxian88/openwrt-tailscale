@@ -4,8 +4,8 @@ permissions:
   contents: read
 
 on:
-  schedule:
-    - cron: '0 4,8,18,22 * * *'
+  #schedule:
+  #  - cron: '0 4,8,18,22 * * *'
   workflow_dispatch:
     inputs:
       version_check_method:
