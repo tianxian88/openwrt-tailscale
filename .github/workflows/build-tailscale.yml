@@ -143,8 +143,7 @@ jobs:
           sed -i 's|.*\/etc\/init\.d\/tailscale.*||g' repo/package/tailscale/Makefile
           sed -i 's|.*\/etc\/config\/tailscale.*||g' repo/package/tailscale/Makefile
         
-           # 2. (可选) 确认修改是否成功，打印 Makefile 中包含 tailscale 的安装部分
-          cat ./feeds/packages/net/tailscale/Makefile 
+          
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
 
