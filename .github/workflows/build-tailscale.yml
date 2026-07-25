@@ -140,8 +140,8 @@ jobs:
         run: |
           VERSION=$(sed -n 's/^PKG_VERSION:=\(.*\)/\1/p' repo/package/tailscale/Makefile | tr -d '[:space:]')
           # 1. 抹除官方 tailscale 默认的启动脚本和配置行
-          sed -i 's|.*\/etc\/init\.d\/tailscale.*||g' repo/feeds/packages/net/tailscale/Makefile
-          sed -i 's|.*\/etc\/config\/tailscale.*||g' repo/feeds/packages/net/tailscale/Makefile
+          sed -i 's|.*\/etc\/init\.d\/tailscale.*||g' repo/package/tailscale/Makefile
+          sed -i 's|.*\/etc\/config\/tailscale.*||g' repo/package/tailscale/Makefile
         
            # 2. (可选) 确认修改是否成功，打印 Makefile 中包含 tailscale 的安装部分
           cat ./feeds/packages/net/tailscale/Makefile 
