@@ -125,35 +125,7 @@ jobs:
           - 'aarch64_cortex-a72'
           - 'aarch64_cortex-a76'
           - 'aarch64_generic'
-          - 'arm_arm1176jzf-s_vfp'
-          - 'arm_arm926ej-s'
-          - 'arm_cortex-a15_neon-vfpv4'
-          - 'arm_cortex-a5_vfpv4'
-          - 'arm_cortex-a7'
-          - 'arm_cortex-a7_neon-vfpv4'
-          - 'arm_cortex-a7_vfpv4'
-          - 'arm_cortex-a8_vfpv3'
-          - 'arm_cortex-a9'
-          - 'arm_cortex-a9_neon'
-          - 'arm_cortex-a9_vfpv3-d16'
-          - 'arm_fa526'
-          - 'arm_xscale'
-          - 'i386_pentium-mmx'
-          - 'i386_pentium4'
-          - 'loongarch64_generic'
-          - 'mips64_mips64r2'
-          - 'mips64_octeonplus'
-          - 'mips64el_mips64r2'
-          - 'mips_24kc'
-          - 'mips_4kec' # 25.12 removed
-          - 'mips_mips32'
-          - 'mipsel_24kc'
-          - 'mipsel_24kc_24kf'
-          - 'mipsel_74kc'
-          - 'mipsel_mips32'
-          - 'riscv64_riscv64'
           - 'x86_64'
-          - 'riscv64_generic' # 25.12 renamed
       fail-fast: true
 
     steps:
@@ -221,13 +193,6 @@ jobs:
             docker pull ghcr.io/openwrt/sdk:${{ matrix.platform }}-V${{ env.OPENWRT_IPK_SDK }}
           fi
 
-      - name: Pull OpenWRT 25.12 SDK Docker Image
-        run: |
-          if echo "${{ env.SKIP_TARGETS_25 }}" | grep -qw "${{ matrix.platform }}"; then
-            echo "Skipping pull of OpenWRT 25.12 SDK for ${{ matrix.platform }} due to unsupported target."
-          else
-            docker pull ghcr.io/openwrt/sdk:${{ matrix.platform }}-V${{ env.OPENWRT_APK_SDK }}
-          fi
 
       # BUILD PACKAGES
 
@@ -257,23 +222,6 @@ jobs:
               bash /builder/build_scripts/build_ipk.sh "${{ steps.get_build_version.outputs.version }}" "${{ matrix.platform }}"
           fi
 
-      - name: Build with OpenWRT 25.12 SDK Docker
-        run: |
-          if echo "${{ env.SKIP_TARGETS_25 }}" | grep -qw "${{ matrix.platform }}"; then
-            echo "Skipping build with OpenWRT 25.12 SDK for ${{ matrix.platform }} due to unsupported target."
-          else
-            docker run --rm \
-              -v "$(pwd)/bin:/builder/bin:z" \
-              -v "$(pwd)/build_scripts:/builder/build_scripts:ro,z" \
-              -v "$(pwd)/tailscale:/builder/tailscale:ro,z" \
-              -v "$(pwd)/keys:/builder/keys:ro,z" \
-              -v "$(pwd)/upx:/builder/upx:ro,z" \
-              -v "$(pwd)/go:/builder/go:ro,z" \
-              -e TERM=xterm \
-              -e FORCE=1 \
-              ghcr.io/openwrt/sdk:${{ matrix.platform }}-V${{ env.OPENWRT_APK_SDK }} \
-              bash /builder/build_scripts/build_apk.sh "${{ steps.get_build_version.outputs.version }}" "${{ matrix.platform }}"
-          fi
 
       - name: Clean Up Build Scripts and Keys
         run: |
