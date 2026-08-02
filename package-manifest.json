@@ -1,0 +1,151 @@
+{
+  "buildDate": "2026-08-02 07:35:58 UTC",
+  "version": "1.98.10",
+  "architectures": {
+    "aarch64_cortex-a53": {
+      "files": [
+        {
+          "name": "Packages",
+          "size": "593.0B",
+          "sha256": "d56a9d48764225b254bd3791174920c925302d4e5a34c4e1bc1d401892112d88"
+        },
+        {
+          "name": "Packages.gz",
+          "size": "422.0B",
+          "sha256": "91c55e9ae7269c6e2df360d9c3e6df26c265be3e990ca4b3bacc339af45eca8f"
+        },
+        {
+          "name": "Packages.sig",
+          "size": "151.0B",
+          "sha256": "760a6ea1ba5bfd37420f58cebdc63feaa7ccc9532c8e612dab451be2090be955"
+        },
+        {
+          "name": "tailscale-1.98.10-r1.ipk",
+          "size": "6.1M",
+          "sha256": "44c89fb591001e287fcb8efe1ac5fc91c8125b8bbfdf7ac1b29cde1e04a2a0a2"
+        },
+        {
+          "name": "tailscaled",
+          "size": "6.1M",
+          "sha256": "68b0b82cc55ea850fa9d56572dc42f5b84b9a7649c5b131d0b725bb3ad44e52d"
+        }
+      ]
+    },
+    "aarch64_cortex-a72": {
+      "files": [
+        {
+          "name": "Packages",
+          "size": "593.0B",
+          "sha256": "4259cdbeafe16d706022dd4c1541885bddde01d050aec3b51201acabb44690e1"
+        },
+        {
+          "name": "Packages.gz",
+          "size": "422.0B",
+          "sha256": "7766fda9564605a155f6600377e68a8ce72454c3cb7b1f3f9f9c8607890fefad"
+        },
+        {
+          "name": "Packages.sig",
+          "size": "151.0B",
+          "sha256": "116184f7387d24dc5b1fdbe6d730066917148bf41c520f8ee619265d2b817a08"
+        },
+        {
+          "name": "tailscale-1.98.10-r1.ipk",
+          "size": "6.1M",
+          "sha256": "fa349fe52b0dd3dd382f1e96cd46ed7e012946adf6fc5c6e2f46cfc54f197570"
+        },
+        {
+          "name": "tailscaled",
+          "size": "6.1M",
+          "sha256": "4100f2e056d820be9dbe7a75f153c8b5c9ddc4f9949cb882f45c61cc804e5dee"
+        }
+      ]
+    },
+    "aarch64_cortex-a76": {
+      "files": [
+        {
+          "name": "Packages",
+          "size": "593.0B",
+          "sha256": "854083e2144a5cbb932c1011b6b0f8ec8380d43f36640b0227433477c529f103"
+        },
+        {
+          "name": "Packages.gz",
+          "size": "425.0B",
+          "sha256": "02566609af55a789dbb9720f16a97e2b7011a7dd4d092ccbc05eaba790eb6ebc"
+        },
+        {
+          "name": "Packages.sig",
+          "size": "151.0B",
+          "sha256": "0a78911715307422dd279cbdcd06dcd74f0e9b4ddb05b33f7f74bb1820937c88"
+        },
+        {
+          "name": "tailscale-1.98.10-r1.ipk",
+          "size": "6.1M",
+          "sha256": "27db4b76b0acc761f8aef9fcd7598178a2889b0a867173be1f73610d95287d36"
+        },
+        {
+          "name": "tailscaled",
+          "size": "6.1M",
+          "sha256": "4100f2e056d820be9dbe7a75f153c8b5c9ddc4f9949cb882f45c61cc804e5dee"
+        }
+      ]
+    },
+    "aarch64_generic": {
+      "files": [
+        {
+          "name": "Packages",
+          "size": "590.0B",
+          "sha256": "fc4bc8bee1f1782bd2fa228eecc934621635e4e4cdbed3af2c67a607c28e5f7d"
+        },
+        {
+          "name": "Packages.gz",
+          "size": "420.0B",
+          "sha256": "a9117de4a87523d0a680d052bcc97ffa6be012848abb7d5357536cc70e227c84"
+        },
+        {
+          "name": "Packages.sig",
+          "size": "151.0B",
+          "sha256": "04dfaa58dc0dbf46aafb35cfd57b699b17d296946e7380b9e7a8ca8be077ce7c"
+        },
+        {
+          "name": "tailscale-1.98.10-r1.ipk",
+          "size": "6.1M",
+          "sha256": "c78ee6509993257c9d2656a8206f26e3be3a6a76c5c0ee48f19f5c26d13a470d"
+        },
+        {
+          "name": "tailscaled",
+          "size": "6.1M",
+          "sha256": "4100f2e056d820be9dbe7a75f153c8b5c9ddc4f9949cb882f45c61cc804e5dee"
+        }
+      ]
+    },
+    "x86_64": {
+      "files": [
+        {
+          "name": "Packages",
+          "size": "581.0B",
+          "sha256": "8217b92b9cbdf7ecb313278da19db3bb6dd1e94ba58c9cd6774aececdaa598a1"
+        },
+        {
+          "name": "Packages.gz",
+          "size": "417.0B",
+          "sha256": "05b0ef34bdfe891ef777018534b93c121891e8bbd2280b7bbe58fc6aef9a6a60"
+        },
+        {
+          "name": "Packages.sig",
+          "size": "151.0B",
+          "sha256": "e79a9e30ca1b0e042b6ae49efb0abb4db648b2ac0dd4f4324463e93a51dbac51"
+        },
+        {
+          "name": "tailscale-1.98.10-r1.ipk",
+          "size": "7.4M",
+          "sha256": "c8b7cd981de0f5107b98990269661ac66a280aa9b76c8c89df02d0bf7a4aac3a"
+        },
+        {
+          "name": "tailscaled",
+          "size": "7.4M",
+          "sha256": "c98bda962aac7b40675ecf40b6096184ad40a8b09e38ebc1f1e819f57961c375"
+        }
+      ]
+    }
+  }
+}
