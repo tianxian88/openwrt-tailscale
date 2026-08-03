@@ -130,7 +130,7 @@ jobs:
 
       - name: Get latest release tag from openwrt-tailscale
         id: get_small
-        uses: actions/github-script@v6
+        uses: actions/github-script@v8
         with:
           script: |
             try {
