@@ -55,7 +55,7 @@ jobs:
       - name: Get GHCR stable version
         id: get_ghcr
         if: ${{ steps.load-method.outputs.method == 'ghcr' }}
-        uses: actions/github-script@v6
+        uses: actions/github-script@v8
         env:
           GHCR_TOKEN: ${{ secrets.GHCR_READ_TOKEN }}
         with:
